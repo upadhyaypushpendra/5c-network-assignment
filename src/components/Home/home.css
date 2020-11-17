@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-color: wheat;
+    height: 50px;
+}
+.search-result{
+    margin: 20px 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+}

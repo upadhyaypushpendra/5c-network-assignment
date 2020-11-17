@@ -1,0 +1,32 @@
+.result-item{
+    max-height: 100px;
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: 20% 75%;
+    grid-column-gap: 5%;
+}
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px grey;
+}
+.result-detail{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.result-detail > a {
+    text-decoration: none;
+}
+.result-detail > .title {
+    font-weight: bolder;
+    color : #1f73a5;
+}
+.result-detail > .followers {
+    font-size: 13px;
+    width:60px;
+    text-align: center;
+    background-color : #1f73a5;
+    color:white;
+}
