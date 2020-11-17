@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import ResultItem from './../ResultItem/ResultItem';
 import './home.css';
 
@@ -13,6 +14,13 @@ function Home(props) {
     const [searchText,setSearchText] = React.useState("");
     const [search,setSearch] = React.useState('');
     const [searchResult,setSearchResult] = React.useState([]);
+    let {username} = useParams();
+    React.useEffect(()=>{
+        if(username){
+            setSearch(username);
+        }
+    },[]);
+    
     React.useMemo(async ()=>{
         const response = await fetch(`https://api.github.com/users/${search}/repos`, {mode: 'cors'})
         if (!response.ok) {
@@ -26,6 +34,7 @@ function Home(props) {
         setSearchResult(result);
     },[search]);
 
+    
     const handleSearch=(e)=>{
         setSearch(searchText);
         alert("Searching "+searchText);

@@ -12,7 +12,7 @@
     box-shadow: 0 0 10px 2px grey;
 }
 .result-detail{
-    margin-left: 10px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
 }

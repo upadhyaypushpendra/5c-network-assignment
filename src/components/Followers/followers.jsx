@@ -6,7 +6,7 @@ function Follower(props){
       <li style={{display:"flex",alignItems:"center"}} >
         <img className="avatar" alt="Avatar" src={props.follower.avatar_url} />
         <div className="result-detail" >
-          <a className="title" href={props.follower.url} >{props.follower.login}</a>
+          <a className="title" href={`/home/search/${props.follower.login}`} >{props.follower.login}</a>
         </div>
       </li>
   );

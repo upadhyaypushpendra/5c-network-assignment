@@ -12,6 +12,7 @@ function App() {
         <Switch>
           <Route path="/home/detail/:id" component={()=><RepoDetail />} />
           <Route path="/home/followers/:username" component={()=> <Followers/>}/>
+          <Route path="/home/search/:username" component={()=><Home />} />
           <Route path="/home" component={()=><Home />} />
           <Redirect path="/" to="/home" />
         </Switch>
